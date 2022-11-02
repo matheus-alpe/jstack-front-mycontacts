@@ -26,6 +26,9 @@
       "imports": "never",
       "exports": "never",
       "functions": "never"
-    }]
+    }],
+    "no-unsafe-optional-chaining": "off",
+    "no-nonoctal-decimal-escape": "off",
+    "import/prefer-default-export": "off"
   }
 }
