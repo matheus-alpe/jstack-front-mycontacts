@@ -11,6 +11,7 @@ export default createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.background};
     font-size: 1rem;
+    color: ${({ theme }) => theme.colors.gray[900]};
   }
 
   button, a {
@@ -20,5 +21,9 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  li {
+    list-style: none;
   }
 `;

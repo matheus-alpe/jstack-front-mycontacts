@@ -6,6 +6,14 @@ export default {
       light: '#6674f4',
       main: '#5061fc',
       dark: '#3346f0'
+    },
+
+    gray: {
+      900: '#222',
+      200: '#bcbcbc'
     }
-  }
+  },
+
+  borderRadius: '4px',
+  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.04)'
 };

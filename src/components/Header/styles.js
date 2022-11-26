@@ -23,7 +23,7 @@ export const InputSearchContainer = styled.div`
     background-color: #fff;
     border: none;
     border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    box-shadow: ${({ theme }) => theme.boxShadow};
     padding: 0 1.2em;
     outline-color: #4f61f678;
 
