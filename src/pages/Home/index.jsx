@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   Header,
   ListContainer,
@@ -23,7 +24,7 @@ export default function Home() {
 
       <Header>
         <strong>3 contatos</strong>
-        <a href="/">Novo contato</a>
+        <Link to="/create">Novo contato</Link>
       </Header>
 
       <ListContainer>
