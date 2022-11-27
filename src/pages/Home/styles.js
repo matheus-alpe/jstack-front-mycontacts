@@ -1,10 +1,31 @@
 import styled from 'styled-components';
 
+export const InputSearchContainer = styled.div`
+  width: 100%;
+
+  input {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: ${({ theme }) => theme.boxShadow};
+    padding: 0 1.2em;
+    outline-color: #4f61f678;
+
+    &::placeholder {
+      color: #bcbcbc;
+    }
+  }
+`;
+
 export const Header = styled.header`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  margin-top: 32px;
+
 
   strong {
     font-weight: bold;
