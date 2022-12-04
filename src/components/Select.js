@@ -10,6 +10,7 @@ export default styled.select`
   padding: 0 16px;
   font-size: 16px;
   outline: none;
+  cursor: pointer;
   transition: border-color .2s ease-in;
 
   &:focus {

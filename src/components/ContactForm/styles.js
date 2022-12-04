@@ -8,5 +8,6 @@ export const Form = styled.form`
 
   button[type="submit"] {
     margin-top: 8px;
+    width: 100%;
   }
 `;

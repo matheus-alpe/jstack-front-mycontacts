@@ -1,29 +1,44 @@
 import styled from 'styled-components';
 
 export default styled.button`
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.primary.main};
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: ${({ theme }) => theme.boxShadow};
+  background: transparent;
   border: none;
   height: 52px;
   padding: 0 16px;
-  color: #fff;
   font-size: 16px;
-  font-weight: bold;
   outline: none;
-  transition: background-color .2s ease-in;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.primary.light};
+  &:not(.flat) {
+    --bg-dark: ${({ theme }) => theme.colors.primary.dark};
+    --bg-main: ${({ theme }) => theme.colors.primary.main};
+    --bg-light: ${({ theme }) => theme.colors.primary.light};
+    &.danger {
+      --bg-dark: ${({ theme }) => theme.colors.red[900]};
+      --bg-main: ${({ theme }) => theme.colors.red[600]};
+      --bg-light: ${({ theme }) => theme.colors.red[200]};
+    }
+
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--bg-main);
+    border-radius: ${({ theme }) => theme.borderRadius};
+    box-shadow: ${({ theme }) => theme.boxShadow};
+    transition: background-color .2s ease-in;
+
+
+
+    &:hover {
+      background-color: var(--bg-light);
+    }
+
+    &:active {
+      background-color: var(--bg-dark);
+    }
+
+    &:disabled {
+      --bg-main: ${({ theme }) => theme.colors.gray[100]};
+      pointer-events: none;
+    }
   }
 
-  &:active {
-    background-color: ${({ theme }) => theme.colors.primary.dark};
-  }
-
-  &:disabled {
-    background-color: ${({ theme }) => theme.colors.gray[100]};
-    cursor: not-allowed;
-  }
 `;
