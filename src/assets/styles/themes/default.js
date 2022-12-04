@@ -10,7 +10,8 @@ export default {
 
     gray: {
       900: '#222',
-      200: '#bcbcbc'
+      200: '#bcbcbc',
+      100: '#ccc'
     }
   },
 

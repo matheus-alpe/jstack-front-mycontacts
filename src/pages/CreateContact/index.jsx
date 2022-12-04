@@ -1,3 +1,4 @@
+import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 import PageHeader from '../../components/PageHeader';
@@ -10,10 +11,12 @@ export default function CreateContact() {
       <Input placeholder="Nome" />
 
       <Select placeholder="Nome">
-        <option value="123">instagram</option>
-        <option value="123">google</option>
-        <option value="123">twitter</option>
+        <option value="123">Instagram</option>
+        <option value="123">Facebook</option>
+        <option value="123">Twitter</option>
       </Select>
+
+      <Button type="button" disabled>Cadastrar</Button>
     </>
   );
 }
