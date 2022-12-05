@@ -1,6 +1,7 @@
 export default {
   colors: {
     background: '#f6f5fc',
+
     primary: {
       lighter: '#e0e3ff',
       light: '#6674f4',
@@ -15,9 +16,9 @@ export default {
     },
 
     red: {
-      900: '#f10101',
+      900: '#f63131',
       600: '#FC5050',
-      200: '#fb7575'
+      200: '#F97171'
     }
   },
 

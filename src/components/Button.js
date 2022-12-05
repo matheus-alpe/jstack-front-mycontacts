@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export default styled.button`
   background: transparent;
@@ -12,11 +12,12 @@ export default styled.button`
     --bg-dark: ${({ theme }) => theme.colors.primary.dark};
     --bg-main: ${({ theme }) => theme.colors.primary.main};
     --bg-light: ${({ theme }) => theme.colors.primary.light};
-    &.danger {
-      --bg-dark: ${({ theme }) => theme.colors.red[900]};
-      --bg-main: ${({ theme }) => theme.colors.red[600]};
-      --bg-light: ${({ theme }) => theme.colors.red[200]};
-    }
+
+    ${({ theme, danger }) => danger && css`
+      --bg-dark: ${theme.colors.red[900]};
+      --bg-main: ${theme.colors.red[600]};
+      --bg-light: ${theme.colors.red[200]};
+    `}
 
     font-weight: bold;
     color: #fff;
