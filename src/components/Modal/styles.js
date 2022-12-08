@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const Overlay = styled.div`
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(3.5px);
-  display: grid;
-  place-items: center;
-`;
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
