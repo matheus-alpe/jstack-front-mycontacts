@@ -8,7 +8,7 @@ export default styled.select`
   box-shadow: ${({ theme }) => theme.boxShadow};
   height: 52px;
   padding: 0 16px;
-  font-size: 16px;
+  font-size: 1rem;
   outline: none;
   cursor: pointer;
   transition: border-color .2s ease-in;

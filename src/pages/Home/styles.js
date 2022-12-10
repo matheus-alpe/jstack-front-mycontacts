@@ -29,7 +29,7 @@ export const Header = styled.header`
 
   strong {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   a {
@@ -99,7 +99,7 @@ export const Card = styled.li`
         color: ${({ theme }) => theme.colors.primary.main};
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 12px;
+        font-size: .75rem;
         padding: 3px 5px;
         border-radius: ${({ theme }) => theme.borderRadius};
       }
@@ -107,7 +107,7 @@ export const Card = styled.li`
 
     span {
       display: block;
-      font-size: 14px;
+      font-size: .875rem;
       color: ${({ theme }) => theme.colors.gray[200]};
     }
   }

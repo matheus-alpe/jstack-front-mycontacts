@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   h1 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: ${({ theme, danger }) => (danger && theme.colors.red[600]) || theme.colors.gray[900]}
   }
 `;

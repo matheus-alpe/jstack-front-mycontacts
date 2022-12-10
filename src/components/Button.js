@@ -5,7 +5,7 @@ export default styled.button`
   border: none;
   height: 52px;
   padding: 0 16px;
-  font-size: 16px;
+  font-size: 1rem;
   outline: none;
 
   &:not(.flat) {

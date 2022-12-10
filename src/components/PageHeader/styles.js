@@ -22,6 +22,6 @@ export const Container = styled.header`
 
   h1 {
     margin-top: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 `;
