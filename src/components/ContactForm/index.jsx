@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+
+import { isEmailValid } from '../../utils';
 
 import Button from '../Button';
 import FormGroup from '../FormGroup';
@@ -8,34 +10,64 @@ import Select from '../Select';
 
 import { Container } from './styles';
 
+const ERRORS_REQUIRED = {
+  name: { field: 'name', message: 'Nome é obrigatório' }
+};
+
 export default function ContactForm({ buttonLabel }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [category, setCategory] = useState('');
-  const [erros, setErros] = useState([]);
+  const [errors, setErros] = useState(Object.values(ERRORS_REQUIRED));
 
-  const handleNameChange = (event) => {
+  const handleNameChange = useCallback((event) => {
     const { value } = event.target;
     setName(value);
 
     if (!value) {
       setErros((prevState) => [
         ...prevState,
-        { field: 'name', message: 'Nome é obrigatório' }
+        ERRORS_REQUIRED.name
       ]);
       return;
     }
 
     setErros((prevState) => prevState.filter((error) => error.field !== 'name'));
-  };
+  });
 
-  function handleSubmit(event) {
+  const handleEmailChange = useCallback((event) => {
+    const { value } = event.target;
+    setEmail(value);
+
+    if (value && !isEmailValid(value)) {
+      if (errors.find((error) => error.field === 'email')) return;
+
+      setErros((prevState) => [
+        ...prevState,
+        { field: 'email', message: 'Email é inválido' }
+      ]);
+      return;
+    }
+
+    setErros((prevState) => prevState.filter((error) => error.field !== 'email'));
+  }, [errors]);
+
+  const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (errors.length > 0) {
+      console.log(errors);
+      return;
+    }
+
     console.log({
-      erros
+      name,
+      email,
+      phone,
+      category
     });
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -53,7 +85,7 @@ export default function ContactForm({ buttonLabel }) {
             type="email"
             placeholder="E-mail"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={handleEmailChange}
           />
         </FormGroup>
 
