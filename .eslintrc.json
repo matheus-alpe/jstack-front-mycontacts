@@ -3,30 +3,27 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb"
-  ],
-  "overrides": [
-  ],
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "overrides": [],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2021,
     "sourceType": "module",
     "ecmaFeatures": {
       "modules": true
     }
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
-    "comma-dangle": ["error", {
-      "imports": "never",
-      "exports": "never",
-      "functions": "never"
-    }],
+    "comma-dangle": [
+      "error",
+      {
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
     "no-unsafe-optional-chaining": "off",
     "no-nonoctal-decimal-escape": "off",
     "import/prefer-default-export": "off"
